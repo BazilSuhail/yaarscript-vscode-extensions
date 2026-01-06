@@ -17,42 +17,6 @@
     "programming language",
     "syntax highlighting"
   ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "yaarscript",
-        "aliases": [
-          "YaarScript",
-          "yaar"
-        ],
-        "extensions": [
-          ".yaar"
-        ],
-        "configuration": "./language-configuration.json",
-        "icon": {
-          "light": "./icons/yaar-script-light.png",
-          "dark": "./icons/yaar-script.png"
-        }
-      }
-    ],
-    "grammars": [
-      {
-        "language": "yaarscript",
-        "scopeName": "source.yaar",
-        "path": "./syntaxes/yaarscript.tmLanguage.json"
-      }
-    ],
-    "iconThemes": [
-      {
-        "id": "yaarscript-icons",
-        "label": "YaarScript Icons",
-        "path": "./icons/yaarscript-icon-theme.json"
-      }
-    ]
-  },
-  "activationEvents": [
-    "onLanguage:yaarscript"
-  ],
   "main": "./extension.js",
   "contributes": {
     "languages": [
@@ -78,6 +42,51 @@
         "scopeName": "source.yaar",
         "path": "./syntaxes/yaarscript.tmLanguage.json"
       }
-    ]
+    ],
+    "themes": [
+      {
+        "label": "YaarScript Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/yaarscript-dark.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "yaarscript.run",
+        "title": "Run YaarScript",
+        "description": "Execute the current YaarScript file",
+        "category": "YaarScript"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "yaarscript.run",
+        "key": "ctrl+shift+r",
+        "when": "resourceLangId == yaarscript"
+      },
+      {
+        "command": "yaarscript.run",
+        "key": "ctrl+alt+r",
+        "when": "resourceLangId == yaarscript"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "yaarscript.run",
+          "group": "1_modification",
+          "when": "resourceLangId == yaarscript"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "yaarscript.run",
+          "group": "navigation",
+          "when": "resourceLangId == yaarscript",
+          "title": "Run YaarScript",
+          "icon": "$(play)"
+        }
+      ]
+    }
   }
 }
