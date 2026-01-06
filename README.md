@@ -37,9 +37,10 @@ YaarScript is an educational programming language meant to break down the barrie
 - `qism` for custom structured data and enumerations
 
 > [!IMPORTANT]
-> **Check out the official open-source repositories to view the core compiler source code and client implementation!**
-> - **Core Engine**: [BazilSuhail/YaarScript](https://github.com/BazilSuhail/YaarScript)
-> - **YaarScript Extension Shell**: [BazilSuhail/YaarScript-Client](https://github.com/BazilSuhail/YaarScript-Client)
+> **Check out the official open-source repositories to explore the complete YaarScript ecosystem!**
+> - 🧩 **VS Code Extension (This Project)**: [BazilSuhail/yaarscript-vscode-extensions](https://github.com/BazilSuhail/yaarscript-vscode-extensions)
+> - ⚙️ **Core Rust Compiler**: [BazilSuhail/YaarScript](https://github.com/BazilSuhail/YaarScript)
+> - 🌐 **Web App Client**: [BazilSuhail/YaarScript-Client](https://github.com/BazilSuhail/YaarScript-Client)
 
 ## Release Notes
 
@@ -48,6 +49,25 @@ YaarScript is an educational programming language meant to break down the barrie
 - Added comprehensive grammar syntax highlighting.
 - Bundled the dedicated YaarScript Dark Theme.
 - Integrated a Cross-Platform code runner natively bound to the VS Code Terminal.
+
+## 📦 Building the Extension Locally
+
+If you are a developer looking to build this extension from source or package it into an installable `.vsix` file:
+
+1. **Install VSCE (VS Code Extension Manager)** globally using npm:
+   ```bash
+   npm install -g @vscode/vsce
+   ```
+2. **Package the extension**:
+   To generate the build, navigate to the project directory in your terminal and run:
+   ```bash
+   vsce package
+   ```
+   *This will instantly generate a `yaarscript-1.0.0.vsix` file. You can install this file directly into VS Code by right-clicking it or dragging it into the Extensions menu.*
+
+## 📜 License
+
+This project is generously open-source and officially protected under the **MIT License**. You are free to use, copy, modify, merge, and distribute this software safely. See the `LICENSE` file for full terms and details.
 
 ## About the Author
 
