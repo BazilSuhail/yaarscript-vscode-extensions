@@ -1,0 +1,202 @@
+{
+  "name": "YaarScript",
+  "type": "dark",
+  "colors": {
+    "editor.foreground": "#D4D4D4",
+    "editor.background": "#1E1E1E",
+    "editor.selectionBackground": "#264F78",
+    "editor.lineHighlightBackground": "#2D2D30",
+    "editor.wordHighlightBackground": "#575757",
+    "editor.wordHighlightStrongBackground": "#004B72",
+    "editorCursor.foreground": "#AEAFAD",
+    "editorWhitespace.foreground": "#E3E4E829",
+    "editorBracketMatch.background": "#0E639C",
+    "editorBracketMatch.border": "#888888"
+  },
+  "tokenColors": [
+    {
+      "name": "Comment",
+      "scope": ["comment"],
+      "settings": {
+        "foreground": "#6A9955"
+      }
+    },
+    {
+      "name": "String",
+      "scope": [
+        "string",
+        "string.quoted.double",
+        "string.quoted.single"
+      ],
+      "settings": {
+        "foreground": "#CE9178"
+      }
+    },
+    {
+      "name": "Number",
+      "scope": ["constant.numeric"],
+      "settings": {
+        "foreground": "#B5CEA8"
+      }
+    },
+    {
+      "name": "Built-in constant",
+      "scope": ["constant.language"],
+      "settings": {
+        "foreground": "#4FC1FF"
+      }
+    },
+    {
+      "name": "User-defined constant",
+      "scope": ["constant.character", "constant.other"],
+      "settings": {
+        "foreground": "#4FC1FF"
+      }
+    },
+    {
+      "name": "Variable",
+      "scope": [
+        "variable",
+        "string interpolation"
+      ],
+      "settings": {
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Keyword",
+      "scope": ["keyword"],
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "name": "Keyword - Control",
+      "scope": ["keyword.control"],
+      "settings": {
+        "foreground": "#C586C0"
+      }
+    },
+    {
+      "name": "Keyword - Declaration",
+      "scope": ["keyword.declaration"],
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "name": "Keyword - Constant",
+      "scope": ["keyword.constant"],
+      "settings": {
+        "foreground": "#4FC1FF"
+      }
+    },
+    {
+      "name": "Keyword - Operator",
+      "scope": ["keyword.operator"],
+      "settings": {
+        "foreground": "#D4D4D4"
+      }
+    },
+    {
+      "name": "Storage",
+      "scope": ["storage"],
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "name": "Storage - Type",
+      "scope": ["storage.type"],
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "name": "Storage - Modifier",
+      "scope": ["storage.modifier"],
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "name": "Support",
+      "scope": ["support"],
+      "settings": {
+        "foreground": "#C8C8C8"
+      }
+    },
+    {
+      "name": "Support - Function",
+      "scope": ["support.function"],
+      "settings": {
+        "foreground": "#DCDCAA"
+      }
+    },
+    {
+      "name": "Entity - Name - Function",
+      "scope": ["entity.name.function"],
+      "settings": {
+        "foreground": "#DCDCAA"
+      }
+    },
+    {
+      "name": "Entity - Name - Type",
+      "scope": ["entity.name.type"],
+      "settings": {
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "name": "Entity - Other - Inherited-Class",
+      "scope": ["entity.other.inherited-class"],
+      "settings": {
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "name": "Variable - Other - ReadWrite - Instance",
+      "scope": ["variable.other.readwrite.instance"],
+      "settings": {
+        "foreground": "#4FC1FF"
+      }
+    },
+    {
+      "name": "Markup - Heading",
+      "scope": ["markup.heading"],
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "name": "Markup - Italic",
+      "scope": ["markup.italic"],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#D7BA7D"
+      }
+    },
+    {
+      "name": "Markup - Bold",
+      "scope": ["markup.bold"],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#D7BA7D"
+      }
+    },
+    {
+      "name": "Markup - Underline",
+      "scope": ["markup.underline"],
+      "settings": {
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "name": "Markup - Strike",
+      "scope": ["markup.strike"],
+      "settings": {
+        "fontStyle": "strikethrough"
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "yaarscript",
+  "displayName": "YaarScript Language Support",
+  "description": "Syntax highlighting, file icons, and language support for YaarScript (.yaar files)",
+  "version": "1.0.0",
+  "publisher": "BazilSuhail",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "keywords": [
+    "yaarscript",
+    "urdu",
+    "programming language",
+    "syntax highlighting"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "yaarscript",
+        "aliases": [
+          "YaarScript",
+          "yaar"
+        ],
+        "extensions": [
+          ".yaar"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/yaar-script-light.png",
+          "dark": "./icons/yaar-script.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "yaarscript",
+        "scopeName": "source.yaar",
+        "path": "./syntaxes/yaarscript.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "yaarscript-icons",
+        "label": "YaarScript Icons",
+        "path": "./icons/yaarscript-icon-theme.json"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:yaarscript"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "yaarscript",
+        "aliases": [
+          "YaarScript",
+          "yaar"
+        ],
+        "extensions": [
+          ".yaar"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/yaar-script-light.png",
+          "dark": "./icons/yaar-script.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "yaarscript",
+        "scopeName": "source.yaar",
+        "path": "./syntaxes/yaarscript.tmLanguage.json"
+      }
+    ]
+  }
+}
