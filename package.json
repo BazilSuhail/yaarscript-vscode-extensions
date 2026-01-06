@@ -55,7 +55,8 @@
         "command": "yaarscript.run",
         "title": "Run YaarScript",
         "description": "Execute the current YaarScript file",
-        "category": "YaarScript"
+        "category": "YaarScript",
+        "icon": "$(play)"
       }
     ],
     "keybindings": [
@@ -82,9 +83,7 @@
         {
           "command": "yaarscript.run",
           "group": "navigation",
-          "when": "resourceLangId == yaarscript",
-          "title": "Run YaarScript",
-          "icon": "$(play)"
+          "when": "resourceLangId == yaarscript"
         }
       ]
     }
