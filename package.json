@@ -2,7 +2,7 @@
   "name": "yaarscript",
   "displayName": "YaarScript Support",
   "description": "Syntax highlighting, code runner, and language support for YaarScript (.yaar files), the ultimate Urdu programming language.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "9b44e0ea-284e-6202-b075-e936e0da1bff",
   "author": "Bazil Suhail",
   "icon": "icons/yaar-script.png",

@@ -1,80 +1,127 @@
 <div align="center">
-  <img src="icons/yaar-script.png" width="128" height="128" alt="YaarScript Logo">
+  <img src="https://raw.githubusercontent.com/BazilSuhail/yaarscript-vscode-extensions/main/icons/yaar-script.png" width="128" height="128" alt="YaarScript Logo">
   <h1>YaarScript VS Code Extension</h1>
   <p><strong>The official VS Code language support for YaarScript, an innovative, educational programming language written with localized syntax!</strong></p>
+  
+  ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+  ![VS Code](https://img.shields.io/badge/VS_Code-%5E1.85.0-blueviolet.svg)
+  ![License](https://img.shields.io/badge/License-MIT-green.svg)
 </div>
 
-## Features
+## Overview
 
-- **Built-in Code Runner**: Instantly execute your `.yaar` scripts with a single click using the integrated Play button in the editor title menu.
-- **Cross-Platform Native Execution**: Bundles the YaarScript compiler to automatically detect your operating system (Windows, macOS, Linux) and natively compile your scripts inside your IDE terminal.
-- **Interactive Terminal**: Captures standard output and supports input flows like `suno()` natively inside VS Code's Integrated Terminal, preventing the limitations of standard Output channels.
-- **Rich Syntax Highlighting**: Accurate token colorization configured specifically for YaarScript grammar, helping you catch syntax errors visually before running your scripts.
-- **Custom Theme**: Includes a built-in Dark Theme exclusively configured and tailored to make `.yaar` files look highly readable and professional.
-- **File Icons**: Custom file icon associations for all files ending in `.yaar`.
-- **Integrated Tooling**: Easily invoke your compiler from anywhere in your project workspace using seamless path resolution.
+YaarScript Support is the ultimate Visual Studio Code extension designed for writing, executing, and debugging .yaar files. This extension serves as the professional bridge between the modern IDE interface and the **YaarScript Core Engine**, an innovative educational language that uniquely lowers the syntactic barrier for those seeking to learn computer science fundamentals.
 
-## Usage
+This extension encapsulates a fully native, cross-platform compilation architecture directly into your workspace. Whether you are compiling numerical logic loops, structural data types, or terminal I/O functions, this extension guarantees absolutely stunning syntactic tokenization alongside a fully immersive, zero-configuration local execution environment.
 
-1. Open your workspace folder containing your YaarScript files.
-2. Open any file ending in `.yaar`.
-3. In the top-right corner of your editor tab, click the **Play** button to execute it.
-4. Alternatively, use the following keyboard shortcuts:
-   - **Windows/Linux**: `Ctrl` + `Shift` + `R` or `Ctrl` + `Alt` + `R`
-   - **Mac**: `Cmd` + `Shift` + `R`
+---
 
-## Architecture & Design
+## Comprehensive Feature Set
 
-This extension bundles pre-compiled native executables of the YaarScript compiler (`yaar-windows.exe`, `yaar-macos`, `yaar-linux`). When you run a script, the extension intelligently detects the host platform natively and seamlessly spawns the corresponding executable directly in your workspace terminal. This design keeps development feedback loops fast and guarantees that standard I/O (like user input prompts) executes correctly.
+### 1. Cross-Platform Subprocess Code Runner
+- Instantly execute your .yaar scripts with a single fluid click using the dedicated Play button (Run) located seamlessly in your editor's title navigation bar.
+- **Operating-System Agnostic Architecture**: The extension statically bundles pre-compiled variations of the core Language compiler (yaar-windows.exe, yaar-macos, yaar-linux). It intelligently detects your host hardware schema and automatically executes the precise binary.
+- Compiles custom .yaar files sequentially in zero-latency inside your IDE terminal!
 
-## About YaarScript
+### 2. Native Integrated Terminal Interaction
+Unlike typical extensions that permanently confine your standard output logs within purely read-only "Output Channels", YaarScript binds explicitly to the genuine VS Code Integrated Environment Terminal.
+- Completely supports blocking I/O calls (e.g., when your execution stream inevitably pauses pending suno() inputs).
+- Safely inherits the dynamic runtime path-mapping resolving file associations relatively around your .yaar location seamlessly.
 
-YaarScript is an educational programming language meant to break down the barriers of entry into programming for native Urdu speakers. Utilizing simple, relatable, and localized syntax:
-- `bolo("...")` instead of `print`
-- `suno()` for capturing user input
-- `dohrao` for iteration workflows
-- `agar` and `warna` for conditional branching
-- `qism` for custom structured data and enumerations
+### 3. Masterful Syntax Highlighting & Tokenizing
+Highly meticulous TextMate grammar definitions explicitly configured against the YaarScript Abstract Syntax Tree. The token matrix supports:
+- Highlighting for built-in subroutines: bolo(), suno(), waqt(), ittifaq().
+- Categorized keywords rendering logically logic branches: dohrao, agar, warna, qism, pakka.
+- Beautiful numerical logic separation, capturing strings, brackets, logical iterators, and scope blocks gracefully, granting visual hints to debug logic problems prior to compiling.
+
+### 4. "YaarScript Dark" Theme
+We bundled an exclusive, hand-crafted aesthetic UI theme engineered to emphasize keyword hierarchy logically alongside semantic scope importance natively. To immerse yourself, type Ctrl+K Ctrl+T, hunt for "YaarScript Dark", and enable the fully authentic experience. 
+
+### 5. Exclusive File Tree Associations
+All files mapped physically under the suffix .yaar instantiate immediately alongside your exclusive stylized fox language icon dynamically injecting style into standard file explorer trees.
+
+---
+
+## Requirements & Version Dependencies
+
+To guarantee the execution engines and dependency libraries boot flawlessly within the background host process, confirm your configurations align with the following specs:
+- **VS Code Extension Host Engine Engine**: >= 1.85.0.
+- **Supported Operating Systems**: Windows (10/11), macOS (Intel/Apple Silicon), and standard Linux distributions.
+- **Extension Engine Level**: Current marketplace model v1.0.0 or newer.
+
+---
+
+## Complete Instruction Protocol
+
+### Getting Started Visually
+1. Open up an active local workspace folder possessing your algorithmic .yaar scripts.
+2. Select any internal file mapping the .yaar extension to activate the language service natively.
+3. Once engaged, immediately witness the flawless visual integration of syntax syntax mapping coloring inside loops and text.
+4. **Initiating the Compilation Stream**:
+   - Scroll up your cursor towards the top-right quadrant of the active window header and deliberately click the **Run YaarScript** icon.
+   - For power developers utilizing zero mouse dependencies, run via core keyboard keybindings:
+     - **Windows/Linux**: Ctrl + Shift + R or Ctrl + Alt + R
+     - **macOS**: Cmd + Shift + R
+
+### Core Syntax Code Implementation Formats
+```yaar
+// Minimal YaarScript Implementation Showcase
+qism Color { RED, GREEN, BLUE };
+
+pakka number MULTIPLIER = 5;
+
+// Routine function test evaluating inputs
+khaali demo_loop() {
+    bolo("Please enter your baseline iteration limit:");
+    number power = suno();
+    
+    // Looping execution branch natively
+    dohrao(number i = 0; i < power; i++) {
+        agar(i == MULTIPLIER) {
+            bolo("Reached critical mass loop iteration!");
+        } warna {
+            bolo(i, "...");
+        }
+    }
+}
+```
+
+---
 
 > [!IMPORTANT]
 > **Check out the official open-source repositories to explore the complete YaarScript ecosystem!**
-> - 🧩 **VS Code Extension (This Project)**: [BazilSuhail/yaarscript-vscode-extensions](https://github.com/BazilSuhail/yaarscript-vscode-extensions)
-> - ⚙️ **Core Rust Compiler**: [BazilSuhail/YaarScript](https://github.com/BazilSuhail/YaarScript)
-> - 🌐 **Web App Client**: [BazilSuhail/YaarScript-Client](https://github.com/BazilSuhail/YaarScript-Client)
+> - **VS Code Extension (This Project)**: [BazilSuhail/yaarscript-vscode-extensions](https://github.com/BazilSuhail/yaarscript-vscode-extensions)
+> - **Core Rust Compiler**: [BazilSuhail/YaarScript](https://github.com/BazilSuhail/YaarScript)
+> - **Web App Client**: [BazilSuhail/YaarScript-Client](https://github.com/BazilSuhail/YaarScript-Client)
 
-## Release Notes
+---
 
-### 1.0.0
-- Initial beta release of YaarScript language support.
-- Added comprehensive grammar syntax highlighting.
-- Bundled the dedicated YaarScript Dark Theme.
-- Integrated a Cross-Platform code runner natively bound to the VS Code Terminal.
+## Local Compilation & Packaging Build Methods
 
-## 📦 Building the Extension Locally
+If you are an extension core-maintainer attempting to clone this repository, iterate components directly, or inject internal UI builds .vsix wrapper binaries cleanly:
 
-If you are a developer looking to build this extension from source or package it into an installable `.vsix` file:
-
-1. **Install VSCE (VS Code Extension Manager)** globally using npm:
+1. **Implement Node Dependencies (VS Code Extension Manager)** utilizing standard NPM package structures tracking globally:
    ```bash
    npm install -g @vscode/vsce
    ```
-2. **Package the extension**:
-   To generate the build, navigate to the project directory in your terminal and run:
+2. **Executing Release Builds**:
+   Traverse inside your fundamental terminal directly towards the root domain of the active clone directory and execute:
    ```bash
    vsce package
    ```
-   *This will instantly generate a `yaarscript-1.0.0.vsix` file. You can install this file directly into VS Code by right-clicking it or dragging it into the Extensions menu.*
+   *The builder streams out an independently zipped yaarscript-1.0.0.vsix wrapper. You are able securely drag that finalized deployment file directly against the Extension Panel inside any generic VS Code software variant.*
 
-## 📜 License
+## Full License Implementation
 
-This project is generously open-source and officially protected under the **MIT License**. You are free to use, copy, modify, merge, and distribute this software safely. See the `LICENSE` file for full terms and details.
-
-## About the Author
-
-Hi! I'm **Bazil Suhail**, the creator of YaarScript and this official VS Code extension. My goal is to make programming highly accessible and enjoyable for everyone, removing the intimidating syntax barriers often found in foundational computer science education. 
-
-- **Reach out to me / View my portfolio:** [bazilsuhail.netlify.app](https://bazilsuhail.netlify.app/)
-- **Support my work:** If you find YaarScript helpful, consider buying me a "Khoya Khjoor" at [bazilsuhail.netlify.app/bye-me-khoya-khjoor](https://bazilsuhail.netlify.app/bye-me-khoya-khjoor)
+This architectural repository and sub-assets possess completely generous security licenses dynamically deployed directly through the **MIT License**. Standard developers acquire free uninhibited capability authorizing them seamlessly to implement, transfer, clone, iterate, merge algorithms, and deploy modified iterations globally commercially. Read the fundamental LICENSE document file covering precise legalities completely.
 
 ---
-*Developed by Bazil Suhail*
+
+## About The Foundational Architect
+
+Greetings! I'm **Bazil Suhail**, the ultimate creator leading the YaarScript architectural algorithms, its specialized Core Rust Engine framework, alongside integrating this official VS Code language implementation! I operate under extreme passion mapping sophisticated software logic parameters making computational algorithms entirely welcoming and exceptionally joyful fundamentally reducing standard coding anxieties generated by heavy Western syntaxes dynamically.
+
+- **Look at my Complete Portfolio / Open Network:** [bazilsuhail.netlify.app](https://bazilsuhail.netlify.app/)
+- **Sponsor Ongoing Upgrades:** If YaarScript elevates your structural productivity significantly functionally consider providing algorithmic energy via a "Khoya Khjoor" at [bazilsuhail.netlify.app/bye-me-khoya-khjoor](https://bazilsuhail.netlify.app/bye-me-khoya-khjoor)!
+
+*Developed by Bazil Suhail.*
