@@ -43,10 +43,19 @@ function runYaarScript(context) {
 
 function executeFile(filePath, context) {
     const compilerDir = path.join(context.extensionPath, 'executables');
-    const compilerPath = path.join(compilerDir, 'compiler.exe');
+    
+    // Determine the correct executable based on the operating system
+    let executableName = 'yaar-linux'; // Default to linux
+    if (process.platform === 'win32') {
+        executableName = 'yaar-windows.exe';
+    } else if (process.platform === 'darwin') {
+        executableName = 'yaar-macos';
+    }
+    
+    const compilerPath = path.join(compilerDir, executableName);
     
     if (!fs.existsSync(compilerPath)) {
-        vscode.window.showErrorMessage('YaarScript compiler not found. Make sure compiler.exe is in the executables directory.');
+        vscode.window.showErrorMessage(`YaarScript executable not found. Make sure ${executableName} is in the executables directory.`);
         return;
     }
     
@@ -83,7 +92,7 @@ function executeFile(filePath, context) {
     }
     
     // Execute compiler natively! Since we cd'ed into the directory, we just pass the file name.
-    runTerminal.sendText(`compiler.exe "${fileName}"`);
+    runTerminal.sendText(`${executableName} "${fileName}"`);
 }
 
 function deactivate() {

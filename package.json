@@ -1,21 +1,30 @@
 {
   "name": "yaarscript",
   "displayName": "YaarScript Language Support",
-  "description": "Syntax highlighting, file icons, and language support for YaarScript (.yaar files)",
+  "description": "Syntax highlighting, code runner, and language support for YaarScript (.yaar files), the ultimate Urdu programming language.",
   "version": "1.0.0",
   "publisher": "BazilSuhail",
+  "author": "Bazil Suhail",
+  "icon": "icons/yaar-script.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BazilSuhail/YaarScript-Client.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
     "Programming Languages",
-    "Themes"
+    "Themes",
+    "Education"
   ],
   "keywords": [
     "yaarscript",
     "urdu",
     "programming language",
-    "syntax highlighting"
+    "syntax highlighting",
+    "code runner",
+    "compiler"
   ],
   "main": "./extension.js",
   "contributes": {
