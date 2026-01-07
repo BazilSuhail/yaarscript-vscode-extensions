@@ -1,7 +1,7 @@
 {
-  "name": "yaarscript",
-  "displayName": "YaarScript Support",
-  "description": "Syntax highlighting, code runner, and language support for YaarScript (.yaar files), the ultimate Urdu programming language.",
+  "name": "yaarscript-snippets",
+  "displayName": "YaarScript Snippets Pack",
+  "description": "Premium Urdu programming snippets for YaarScript. The ultimate collection of high-speed templates for .yaar files including mandatory entry points, loops, and complex algorithmic demos.",
   "version": "1.0.1",
   "publisher": "9b44e0ea-284e-6202-b075-e936e0da1bff",
   "author": "Bazil Suhail",
@@ -14,19 +14,16 @@
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Programming Languages",
-    "Themes",
+    "Snippets",
     "Education"
   ],
   "keywords": [
     "yaarscript",
+    "yaarscript snippets",
     "urdu",
     "programming language",
-    "syntax highlighting",
-    "code runner",
-    "compiler"
+    "snippets"
   ],
-  "main": "./extension.js",
   "contributes": {
     "languages": [
       {
@@ -38,63 +35,14 @@
         "extensions": [
           ".yaar"
         ],
-        "configuration": "./language-configuration.json",
-        "icon": {
-          "light": "./icons/yaar-script-light.png",
-          "dark": "./icons/yaar-script.png"
-        }
+        "configuration": "./language-configuration.json"
       }
     ],
-    "grammars": [
+    "snippets": [
       {
         "language": "yaarscript",
-        "scopeName": "source.yaar",
-        "path": "./syntaxes/yaarscript.tmLanguage.json"
+        "path": "./snippets/snippets.json"
       }
-    ],
-    "themes": [
-      {
-        "label": "YaarScript Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/yaarscript-dark.json"
-      }
-    ],
-    "commands": [
-      {
-        "command": "yaarscript.run",
-        "title": "Run YaarScript",
-        "description": "Execute the current YaarScript file",
-        "category": "YaarScript",
-        "icon": "$(play)"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "yaarscript.run",
-        "key": "ctrl+shift+r",
-        "when": "resourceLangId == yaarscript"
-      },
-      {
-        "command": "yaarscript.run",
-        "key": "ctrl+alt+r",
-        "when": "resourceLangId == yaarscript"
-      }
-    ],
-    "menus": {
-      "editor/context": [
-        {
-          "command": "yaarscript.run",
-          "group": "1_modification",
-          "when": "resourceLangId == yaarscript"
-        }
-      ],
-      "editor/title": [
-        {
-          "command": "yaarscript.run",
-          "group": "navigation",
-          "when": "resourceLangId == yaarscript"
-        }
-      ]
-    }
+    ]
   }
 }

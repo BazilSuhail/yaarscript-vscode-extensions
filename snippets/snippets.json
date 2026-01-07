@@ -1,0 +1,238 @@
+{
+	"Yaar Complete Template": {
+		"prefix": "yr-init",
+		"body": [
+			"// YaarScript Project: ${1:ProjectName}",
+			"// Author: Bazil Suhail",
+			"",
+			"// --- GLOBAL DEFINITIONS ---",
+			"// Declare custom types and constants here",
+			"qism ${2:Config} {",
+			"\tSTART,",
+			"\tSTOP,",
+			"\tWAIT",
+			"};",
+			"",
+			"pakka number LIMIT = 100;",
+			"number global_id = 1000;",
+			"",
+			"// --- HELPER ROUTINES ---",
+			"// Define functions that capture logic outside main entry",
+			"khaali pracham(number code) {",
+			"\tintekhab (code) {",
+			"\t\tagar_ho 0: bolo(\"SUCCESS\"); bas_kar;",
+			"\t\tagar_ho 1: bolo(\"ERROR\"); bas_kar;",
+			"\t\taakhir: bolo(\"UNKNOWN\"); bas_kar;",
+			"\t}",
+			"}",
+			"",
+			"// --- REQUIRED ENTRY POINT ---",
+			"// This block executes first recursively",
+			"yaar {",
+			"\tbolo(\"--- Welcome to ${1%[^a-zA-Z0-9]%/%} ---\");",
+			"\t$0",
+			"\t",
+			"\t// Finalizing Execution",
+			"\tpracham(0);",
+			"}"
+		],
+		"description": "Initialize a complete YaarScript file with mandatory yaar{} entry point, enums, constants, and functions"
+	},
+	"Mandatory Entry Point": {
+		"prefix": "yr-yaar",
+		"body": [
+			"// The required block for all YaarScript programs",
+			"yaar {",
+			"\t$0",
+			"}"
+		],
+		"description": "The required entry point block for all YaarScript programs"
+	},
+	"Switch Statement": {
+		"prefix": "yr-intekhab",
+		"body": [
+			"// Selection Branching: Variable '${1:variable}' must be declared before this block",
+			"intekhab (${1:variable}) {",
+			"\tagar_ho ${2:value}:",
+			"\t\t// Execute logic if matches ${2:value}",
+			"\t\t$3",
+			"\t\tbas_kar;",
+			"\taakhir:",
+			"\t\t// Execute default logic if no match found",
+			"\t\t$0",
+			"\t\tbas_kar;",
+			"}"
+		],
+		"description": "Selection / Branching statement with mandatory default case"
+	},
+	"Numeric Diamond Generator": {
+		"prefix": "yr-diamond",
+		"body": [
+			"yaar {",
+			"\t// Generate a professional numeric diamond pattern",
+			"\tnumber size = ${1:5}; // Define size of the diamond",
+			"\tbolo(\"Generating Diamond (Size: \", size, \")...\\n\");",
+			"\t",
+			"\t// --- Top Half Generation ---",
+			"\tdohrao (number i = 1; i <= size; i++) {",
+			"\t\tdohrao (number s = 1; s <= (size - i); s++) { bolo(\" \"); }",
+			"\t\tdohrao (number j = 1; j <= i; j++) {",
+			"\t\t\tbolo(\" \");",
+			"\t\t\tbolo(i);",
+			"\t\t}",
+			"\t\tbolo(\"\\n\");",
+			"\t}",
+			"\t",
+			"\t// --- Bottom Half Generation ---",
+			"\tdohrao (number i = (size - 1); i >= 1; i--) {",
+			"\t\tdohrao (number s = 1; s <= (size - i); s++) { bolo(\" \"); }",
+			"\t\tdohrao (number j = 1; j <= i; j++) {",
+			"\t\t\tbolo(\" \");",
+			"\t\t\tbolo(i);",
+			"\t\t}",
+			"\t\tbolo(\"\\n\");",
+			"\t}",
+			"}"
+		],
+		"description": "Template for a complex nested loop pattern generator inside a yaar{} block"
+	},
+	"Sensor Calibration Demo": {
+		"prefix": "yr-sensor",
+		"body": [
+			"yaar {",
+			"\t// Automated Sensor Calibration Loop",
+			"\tnumber attempt = 1; // Initialize tracking varaible",
+			"\tfaisla sensor_ready = galat; // Boolean flag",
+			"\t",
+			"\tkaro {",
+			"\t\tbolo(\"Probe #\", attempt, \": \");",
+			"\t\tagar (attempt < ${1:10}) {",
+			"\t\t\tbolo(\"Calibrating... [WAIT]\\n\");",
+			"\t\t} warna {",
+			"\t\t\tbolo(\"Optimal Status! [READY]\\n\");",
+			"\t\t\tsensor_ready = sahi;",
+			"\t\t}",
+			"\t\tattempt = attempt + 1;",
+			"\t} jabtak (!sensor_ready);",
+			"}"
+		],
+		"description": "Template for a do-while loop with conditional logic inside a yaar{} block"
+	},
+	"Execution Timer": {
+		"prefix": "yr-timer",
+		"body": [
+			"yaar {",
+			"\t// Start capturing time metrics",
+			"\tnumber start_waqt = waqt();",
+			"\t",
+			"\t// --- Start Critical Tasks ---",
+			"\t$0",
+			"\t// --- End Critical Tasks ---",
+			"\t",
+			"\tnumber end_waqt = waqt();",
+			"\tbolo(\"Execution Result: \", end_waqt - start_waqt, \" ms\\n\");",
+			"}"
+		],
+		"description": "Template for measuring execution time inside a yaar{} block"
+	},
+	"Random Number Generator": {
+		"prefix": "yr-random",
+		"body": [
+			"yaar {",
+			"\t// Generate a random numeric result in range",
+			"\tnumber min_val = ${1:1};",
+			"\tnumber max_val = ${2:100};",
+			"\tnumber result = ittifaq(min_val, max_val);",
+			"\tbolo(\"Probability Outcome: \", result, \"\\n\");",
+			"}"
+		],
+		"description": "Generate a random number inside a yaar{} block"
+	},
+	"If Statement": {
+		"prefix": "yr-agar",
+		"body": [
+			"// Branching Logic: Ensure condition evaluates to faisla (boolean)",
+			"agar (${1:condition}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "If statement"
+	},
+	"If Else Statement": {
+		"prefix": "yr-warna",
+		"body": [
+			"// Branching Logic: Ensure condition evaluates to faisla (boolean)",
+			"agar (${1:condition}) {",
+			"\t$2",
+			"} warna {",
+			"\t$0",
+			"}"
+		],
+		"description": "If-else statement"
+	},
+	"For Loop": {
+		"prefix": "yr-dohrao",
+		"body": [
+			"// Iteration Loop: Initializer, Condition, and Step are required",
+			"dohrao (number ${1:i} = 0; ${1:i} < ${2:10}; ${1:i}++) {",
+			"\t$0",
+			"}"
+		],
+		"description": "For loop"
+	},
+	"While Loop": {
+		"prefix": "yr-jabtak",
+		"body": [
+			"// While Loop: Executes as long as condition remains sahi (true)",
+			"jabtak (${1:condition}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "While loop"
+	},
+	"Enum Declaration": {
+		"prefix": "yr-qism",
+		"body": [
+			"// Custom Type: Define structured enumerations using uppercase fields",
+			"qism ${1:Name} {",
+			"\t${2:Field1},",
+			"\t${3:Field2}",
+			"};"
+		],
+		"description": "Enum declaration"
+	},
+	"Void Function": {
+		"prefix": "yr-khaali",
+		"body": [
+			"// Routine: Use khaali for functions that do not return values",
+			"khaali ${1:functionName}(${2:parameters}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Void function"
+	},
+	"Print Statement": {
+		"prefix": "yr-bolo",
+		"body": [
+			"// Output: Terminal logging",
+			"bolo(${1:\"message\"});"
+		],
+		"description": "Print to console"
+	},
+	"Constant": {
+		"prefix": "yr-pakka",
+		"body": [
+			"// Immutable: Values set via pakka cannot be modified after declaration",
+			"pakka ${1|number,float,faisla|} ${2:NAME} = ${3:value};"
+		],
+		"description": "Constant declaration"
+	},
+	"Variable": {
+		"prefix": "yr-var",
+		"body": [
+			"// Mutable: standard variable declaration",
+			"${1|number,float,faisla|} ${2:name} = ${3:value};"
+		],
+		"description": "Variable declaration"
+	}
+}
